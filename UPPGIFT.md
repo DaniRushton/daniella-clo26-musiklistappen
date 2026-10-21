@@ -33,7 +33,9 @@ Du använder **SQLite** och din databas från diskografi-inlämningen. Du får a
 |-----|-----------|
 | `MusikApp/DbHandler.cs` | Ett **skelett**: metoderna och kommentarer finns, koden skriver du själv |
 | `MusikApp/Song.cs` | Din data-klass (tom, du lägger till egenskaperna) |
-| `MusikApp/Program.cs` | Här bygger du menyn |
+| `MusikApp/Program.cs` | Här bygger du menyn. Den läser redan in `appsettings.json` åt dig |
+| `MusikApp/appsettings.json` | Inställningar: sökvägen till din databas (`Data Source=musik.db`) |
+| `MusikApp/appsettings.example.json` | Exempel som visar vilka nycklar som behövs (samma som i hero_databas) |
 | `README.md` | Mall för din egen README, som du fyller i |
 | `reflektion.md` | Reflektionen, som du fyller i |
 | `INLAMNING.md` | Steg för steg hur du lämnar in |
@@ -144,7 +146,8 @@ command.ExecuteNonQuery();
 ## Tips
 
 - Börja med att få menyn att fungera — utan databas. Skriv ut "Här kommer en lista senare" tills anslutningen är klar.
-- Lägg din `.db`-fil i mappen `MusikApp/` och döp den till `musik.db`.
+- Lägg din `.db`-fil i mappen `MusikApp/` och döp den till `musik.db`. Heter din fil något annat ändrar du i `appsettings.json`, inte i koden.
+- `appsettings.json` innehåller här bara databasens filnamn, inga hemligheter, så den får ligga i git. Lägger du någonsin ett lösenord i en sådan fil ska den *inte* checkas in (se hero_databas, labb 1).
 - En metod = en sak. `VisaAllaLåtar()`, `LäggTillLåt()`, `TaBortLåt()` — håll dem korta.
 - Du behöver inte skriva om eller förbättra SQL-schemat. Det du har fungerar.
 - Fastnar du: börja med `GetAllSongs()` i `DbHandler.cs`. När den fungerar är resten samma mönster.

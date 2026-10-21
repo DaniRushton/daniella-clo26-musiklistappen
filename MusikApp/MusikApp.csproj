@@ -10,6 +10,13 @@
   <ItemGroup>
     <!-- ADO.NET-leverantören för SQLite -->
     <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.13" />
+    <!-- Läser appsettings.json (samma som i hero_databas) -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Kopieras till bin-mappen så att appen hittar den när den körs -->
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>

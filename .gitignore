@@ -7,3 +7,8 @@ obj/
 *.db-journal
 *.db-wal
 *.db-shm
+
+# appsettings.json innehåller här bara databasens filnamn, inga hemligheter, så den får ligga i git.
+# Lägger du någonsin ett lösenord i den: ta bort # på raden nedan och checka bara in appsettings.example.json
+# (se hero_databas, labb 1).
+# MusikApp/appsettings.json

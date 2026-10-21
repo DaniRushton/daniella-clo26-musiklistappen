@@ -13,6 +13,7 @@
 3. **Klona din fork** till din dator och öppna `MusikApp.slnx`.
 4. **Lägg din databas** i `MusikApp/` och döp den till `musik.db`.
    (Ingen databas? Importera `exempel/musik_exempel.sql` i DB Browser for SQLite.)
+   Sökvägen står i `MusikApp/appsettings.json`. Heter din fil något annat ändrar du där.
 5. **Bygg appen.** Börja med menyn i `Program.cs`, sedan metoderna i `DbHandler.cs`. Läs `UPPGIFT.md` för kraven. Spara ofta med `git commit`.
 6. **Fyll i `README.md`** (ersätt mallen med din egen text och lägg in en screenshot på huvudmenyn).
 7. **Fyll i `reflektion.md`.**
@@ -36,6 +37,7 @@
 
 ## Vad gör jag om det går fel?
 
-- **"Kunde inte hitta databasen" / tom lista:** kontrollera att `musik.db` ligger i `MusikApp/` och att tabellnamnen i din SQL stämmer med din databas.
+- **"Kunde inte hitta databasen" / tom lista:** kontrollera att `musik.db` ligger i `MusikApp/`, att filnamnet stämmer med `appsettings.json` och att tabellnamnen i din SQL stämmer med din databas.
+- **`FileNotFoundException` om `appsettings.json`:** filen saknas. Kopiera `appsettings.example.json` till `appsettings.json` i mappen `MusikApp/`.
 - **`NotImplementedException`:** den betyder bara att du inte har skrivit metoden än. Det är meningen att den ska synas tills du har gjort det.
 - **Fastnar du:** skriv i klassens chatt eller fråga i början av lektionen. Skicka inte in en halvfärdig uppgift utan att säga till.

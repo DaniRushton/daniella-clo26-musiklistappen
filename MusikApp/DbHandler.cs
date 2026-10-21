@@ -20,12 +20,13 @@ namespace MusikApp;
 /// </summary>
 public class DbHandler
 {
-    // Tips: spara bara connection string här (t.ex. "Data Source=musik.db").
+    // Tips: spara bara connection string här. Den kommer från appsettings.json
+    // via Program.cs (t.ex. "Data Source=musik.db").
     // Öppna sedan en NY anslutning inuti varje metod nedan.
 
-    public DbHandler(string dbPath)
+    public DbHandler(string connectionString)
     {
-        // TODO: bygg connection string av dbPath och spara den i ett fält.
+        // TODO: spara connectionString i ett fält som metoderna nedan kan använda.
         throw new NotImplementedException();
     }
 
