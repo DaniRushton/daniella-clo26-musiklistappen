@@ -147,7 +147,7 @@ command.ExecuteNonQuery();
 
 - Börja med att få menyn att fungera — utan databas. Skriv ut "Här kommer en lista senare" tills anslutningen är klar.
 - Lägg din `.db`-fil i mappen `MusikApp/` och döp den till `musik.db`. Heter din fil något annat ändrar du i `appsettings.json`, inte i koden.
-- `appsettings.json` innehåller här bara databasens filnamn, inga hemligheter, så den får ligga i git. Lägger du någonsin ett lösenord i en sådan fil ska den *inte* checkas in (se hero_databas, labb 1).
+- `appsettings.json` följer med i mallen så att appen fungerar direkt, och den innehåller här bara databasens filnamn, inga hemligheter. Normalt checkar man *inte* in den (se hero_databas, labb 1). Lägger du någonsin ett lösenord i en sådan fil: kör `git rm --cached MusikApp/appsettings.json` först, så att git slutar följa den. Det som ska finnas i repot är `appsettings.example.json`.
 - En metod = en sak. `VisaAllaLåtar()`, `LäggTillLåt()`, `TaBortLåt()` — håll dem korta.
 - Du behöver inte skriva om eller förbättra SQL-schemat. Det du har fungerar.
 - Fastnar du: börja med `GetAllSongs()` i `DbHandler.cs`. När den fungerar är resten samma mönster.
