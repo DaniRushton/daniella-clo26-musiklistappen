@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+# Din .db-fil får följa med i repot, men inte SQLites tillfälliga filer:
+*.db-journal
+*.db-wal
+*.db-shm
